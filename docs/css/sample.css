@@ -14,3 +14,9 @@ body {
 	.inner h2 {
 		font-weight:bold;
 	}
+
+@media screen and (max-width: 640px) {
+	.square {
+		font-size: 3.5vw;
+	}
+}

@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "uglify-js": "^3.0.26"
+  },
+  "scripts": {
+    "build": "uglifyjs --compress --mangle --output dist/jquery.square.min.js -- src/jquery.square.js"
+  }
+}
