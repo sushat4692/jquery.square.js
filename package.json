@@ -1,8 +1,20 @@
 {
+  "name": "jquery.square.js",
+  "version": "0.2.0",
+  "description": "jquery.square.js",
+  "main": "./src/jquery.square.ts",
+  "author": "SUSH",
+  "license": "MIT",
   "devDependencies": {
+    "@types/jquery": "^3.2.16",
+    "typescript": "^2.6.1",
     "uglify-js": "^3.0.26"
   },
   "scripts": {
-    "build": "uglifyjs --compress --mangle --output dist/jquery.square.min.js -- src/jquery.square.js"
+    "build:ts": "tsc -p ./",
+    "watch:ts": "tsc -p ./ -w",
+    "uglifyjs": "uglifyjs --compress --mangle --output dist/jquery.square.min.js -- dist/jquery.square.js",
+    "copy": "cp -f ./dist/jquery.square.js ./docs/js/jquery.square.js && cp -f ./dist/jquery.square.min.js ./docs/js/jquery.square.min.js",
+    "build": "npm run build:ts && npm run uglifyjs && npm run copy"
   }
 }

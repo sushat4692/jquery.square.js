@@ -168,14 +168,16 @@
                 square.destroy();
                 square = null;
             }
-            switch(now) {
-                case 'pc':
-                    square = $("#boxOuter").square( { size:200, space:2, speed:0, duration: 0, ease:"easeOutExpo" } );
-                    break;
-                case 'sp':
-                    square = $("#boxOuter").square( { size:'50%', space:'2%', speed:0, duration: 0, ease:"easeOutExpo" } );
-                    break;
-            }
+            setTimeout(function() {
+                switch(now) {
+                    case 'pc':
+                        square = $("#boxOuter").square( { width:200, height: 200, space:2, speed:0, duration: 0, ease:"easeOutExpo" } );
+                        break;
+                    case 'sp':
+                        square = $("#boxOuter").square( { width:'50%', height: 400, space:'2%', speed:0, duration: 0, ease:"easeOutExpo" } );
+                        break;
+                }
+            }, 1)
         }
         $(window).on('resize', resizeHandler);
         resizeHandler();
