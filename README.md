@@ -4,7 +4,7 @@ Simple adjusting layout library for Square Grid Layout
 
 ### Demo
 
-[Demo](http://sus-happy.github.io/jquery.square.js/)
+[Demo](http://sushat4692.github.io/jquery.square.js/)
 
 ### Changelog
 
